@@ -4,15 +4,21 @@ public class AccessModifier {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Car c = new Car("Dzire",355000);
-		
+		Car c = new Car("Tiago",355000);
 		System.out.println("name:"+c.getName());
-		System.out.println("name:"+c.getPrice());
+		System.out.println("Price:"+c.getPrice());
 		
-		Fruit c1 = new Fruit();
+		Car c1 = new Car();
+		System.out.println("name:"+c1.getName());
+		System.out.println("Price:"+c1.getPrice());
 		
-		System.out.println("name:"+c1.name);
-		System.out.println("name:"+c1.price);
+		Swift swift = new Swift("Red", "Swift Dzire", 400000);
+		System.out.println("name:"+swift.getName());
+		System.out.println("Price:"+swift.getPrice());
+		System.out.println("Color:"+swift.color);
+		
+		
+		
 
 	}
 }
@@ -45,6 +51,15 @@ public class AccessModifier {
 		public void setPrice(double price) {
 			this.price = price;
 		}
+			
+	}
+	//inheritence example
+	class Swift extends Car{
+		String color ="sky blue";
 		
-		
+		public Swift(String color, String name, double price) {
+			super(name,price);
+			this.color=color;
+			
+		}
 	}
